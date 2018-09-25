@@ -18,7 +18,7 @@ rc = RocketChat(RC_ADMIN_ACCOUNT, RC_ADMIN_PASSWORD, server_url=RC_URL)
 
 channel_mappings = [
     {
-        'ldap_query': '(&(objectclass=person))', # query to find users to add
+        'ldap_query': '(objectclass=person)', # query to find users to add
         'channel': 'testchannel', # machine-readable ("slugified") channel name (see channel details to find this)
         'private': True, # set to True if the target channel is a private group. rcadmin must be member of this group to manage it!
         'apply': True, # if this is False, the script will not actually apply the new member list, just print the changes! use this to test your mapping
